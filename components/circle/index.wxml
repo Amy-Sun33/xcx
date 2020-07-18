@@ -1,0 +1,19 @@
+<view class="circle_box" style="width:{{size}}px;height:{{size}}px;">
+  <block wx:if="{{imageDraw && imageBg}}">
+    <image src="{{imageBg}}" class="circle_bg" style="width:{{size}}px;height:{{size}}px"/>
+    <image src="{{imageDraw}}" class="circle_draw" style="width:{{size}}px;height:{{size}}px"/>
+  </block>
+  <block wx:else>
+      <canvas 
+        canvas-id="{{canvasId}}bg" 
+        class="circle_bg"
+        style="width:{{size}}px;height: {{size}}px"
+      ></canvas>
+      <canvas 
+        class="circle_draw"
+        canvas-id="{{canvasId}}"
+        style="width:{{size}}px;height: {{size}}px"
+      ></canvas>
+      <text class="circle_txt" style="color: {{circleBgTxt}}"> {{per}}%  </text>
+  </block>
+</view>

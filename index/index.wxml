@@ -1,0 +1,19 @@
+<block 
+  wx:for="{{circleList}}"
+  wx:key="index"
+  wx:for-item="item"
+>
+  <circle
+    canvas-id="{{item.id}}"
+    per="{{item.rate}}"
+    circle-bg="{{item.bg}}"
+    circle-draw="{{item.draw}}"
+    circle-bg-color="{{item.bgColor}}"
+    circle-bg-txt="{{item.colorTxt}}"
+  ></circle>
+</block>
+<view>
+  <span style="color: red">存在问题：</span>
+  <p>1. 优先级最高。同级z-index存在问题 （解决方案：canvas画好后，转换成image）</p>
+  <p>2. 每次都会重新绘画，造成闪的视觉。</p>  
+</view>

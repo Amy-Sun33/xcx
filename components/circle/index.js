@@ -1,4 +1,7 @@
 // components/circle/index.js
+/**
+ * 圆形绘制组件
+ */
 Component({
   /**
    * 组件的属性列表
